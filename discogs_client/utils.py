@@ -13,7 +13,7 @@ except ImportError:
 
 def parse_timestamp(timestamp):
     """Convert an ISO 8601 timestamp into a datetime."""
-    return datetime.strptime(timestamp, '%Y-%m-%dT%H:%M:%S')
+    return datetime.strptime(timestamp[:-6], '%Y-%m-%dT%H:%M:%S')
 
 
 def update_qs(url, params):
